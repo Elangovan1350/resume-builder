@@ -13,15 +13,15 @@ const schema = z.object({
     z.object({
       title: z.string().min(3, 'Title must be at least 3 characters long'),
       company: z.string().min(3, 'Company must be at least 3 characters long'),
-      duration: z.string().min(5, 'Duration must be at least 10 characters long'),
-      description: z.string().min(5, 'Description must be at least 10 characters long'),
+      duration: z.string().min(5, 'Duration must be at least 5 characters long'),
+      description: z.string().min(5, 'Description must be at least 5 characters long'),
     })
   ),
   education: z.array(
     z.object({
       degree: z.string().min(3, 'Degree must be at least 3 characters long'),
       college: z.string().min(3, 'College must be at least 3 characters long'),
-      duration: z.string().min(5, 'Duration must be at least 10 characters long'),
+      duration: z.string().min(5, 'Duration must be at least 5 characters long'),
     })
   ),
   skills: z.array(
