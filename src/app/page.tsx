@@ -123,7 +123,6 @@ const Home = () => {
 
   return (
     <>
-      <Theme />
       <div
         className={`min-h-screen transition-colors duration-300 py-12 px-4 sm:px-6 lg:px-8 flex flex-col items-center justify-center ${
           theme
@@ -145,7 +144,7 @@ const Home = () => {
 
         {/* Main Form Card */}
         <form
-          className={`w-full max-w-3xl backdrop-blur-xl rounded-2xl sm:rounded-3xl p-2 sm:p-8 md:p-12 shadow-lg border animate-[fadeInUp_0.8s_ease-out] ${
+          className={`w-full max-w-3xl backdrop-blur-xl rounded-2xl sm:rounded-3xl p-4 sm:p-8 md:p-12 shadow-lg border animate-[fadeInUp_0.8s_ease-out] ${
             theme
               ? "bg-white/80 border-gray-200 shadow-[0_8px_32px_rgba(0,0,0,0.1)]"
               : "bg-white/5 border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.3)]"
@@ -463,7 +462,7 @@ const Home = () => {
                     description: "",
                   })
                 }
-                className="w-full bg-linear-to-r from-green-500 to-emerald-500 text-white font-semibold py-3.5 sm:py-3 px-6 rounded-xl shadow-lg hover:shadow-[0_0_30px_rgba(34,197,94,0.4)] transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center gap-2 text-base sm:text-base touch-manipulation"
+                className="w-full bg-linear-to-r from-green-500 to-emerald-500 text-white font-semibold py-3.5 px-6 rounded-xl shadow-lg hover:shadow-[0_0_30px_rgba(34,197,94,0.4)] transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center gap-2 text-base touch-manipulation"
               >
                 <span className="text-xl">➕</span>
                 <span>Add Another Position</span>
@@ -572,7 +571,7 @@ const Home = () => {
                 onClick={() =>
                   educationAppend({ degree: "", college: "", duration: "" })
                 }
-                className="w-full bg-linear-to-r from-blue-500 to-cyan-500 text-white font-semibold py-3.5 sm:py-3 px-6 rounded-xl shadow-lg hover:shadow-[0_0_30px_rgba(59,130,246,0.4)] transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center gap-2 text-base sm:text-base touch-manipulation"
+                className="w-full bg-linear-to-r from-blue-500 to-cyan-500 text-white font-semibold py-3.5 px-6 rounded-xl shadow-lg hover:shadow-[0_0_30px_rgba(59,130,246,0.4)] transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center gap-2 text-base touch-manipulation"
               >
                 <span className="text-xl">➕</span>
                 <span>Add Another Education</span>
@@ -688,7 +687,7 @@ const Home = () => {
               <button
                 type="button"
                 onClick={() => projectsAppend({ name: "", description: "" })}
-                className="w-full bg-linear-to-r from-blue-500 to-cyan-500 text-white font-semibold py-3.5 sm:py-3 px-6 rounded-xl shadow-lg hover:shadow-[0_0_30px_rgba(59,130,246,0.4)] transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center gap-2 text-base sm:text-base touch-manipulation"
+                className="w-full bg-linear-to-r from-blue-500 to-cyan-500 text-white font-semibold py-3.5 px-6 rounded-xl shadow-lg hover:shadow-[0_0_30px_rgba(59,130,246,0.4)] transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center gap-2 text-base touch-manipulation"
               >
                 <span className="text-xl">➕</span>
                 <span>Add Another Project</span>
@@ -803,7 +802,7 @@ const Home = () => {
               <button
                 type="button"
                 onClick={() => skillsAppend({ name: "", level: "beginner" })}
-                className="w-full bg-linear-to-r from-orange-500 to-amber-500 text-white font-semibold py-3.5 sm:py-3 px-6 rounded-xl shadow-lg hover:shadow-[0_0_30px_rgba(249,115,22,0.4)] transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center gap-2 text-base sm:text-base touch-manipulation"
+                className="w-full bg-linear-to-r from-orange-500 to-amber-500 text-white font-semibold py-3.5 px-6 rounded-xl shadow-lg hover:shadow-[0_0_30px_rgba(249,115,22,0.4)] transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center gap-2 text-base touch-manipulation"
               >
                 <span className="text-xl">➕</span>
                 <span>Add Another Skill</span>
@@ -904,7 +903,7 @@ const Home = () => {
                     description: "",
                   })
                 }
-                className="w-full bg-linear-to-r from-purple-500 to-indigo-500 text-white font-semibold py-3.5 sm:py-3 px-6 rounded-xl shadow-lg hover:shadow-[0_0_30px_rgba(168,85,247,0.4)] transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center gap-2 text-base sm:text-base touch-manipulation"
+                className="w-full bg-linear-to-r from-purple-500 to-indigo-500 text-white font-semibold py-3.5 px-6 rounded-xl shadow-lg hover:shadow-[0_0_30px_rgba(168,85,247,0.4)] transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center gap-2 text-base touch-manipulation"
               >
                 <span className="text-xl">➕</span>
                 <span>Add Another Certification</span>
@@ -974,7 +973,7 @@ const Home = () => {
               <button
                 type="button"
                 onClick={() => keywordsAppend({ value: "" })}
-                className="w-full bg-linear-to-r from-pink-500 to-rose-500 text-white font-semibold py-3.5 sm:py-3 px-6 rounded-xl shadow-lg hover:shadow-[0_0_30px_rgba(236,72,153,0.4)] transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center gap-2 text-base sm:text-base touch-manipulation"
+                className="w-full bg-linear-to-r from-pink-500 to-rose-500 text-white font-semibold py-3.5 px-6 rounded-xl shadow-lg hover:shadow-[0_0_30px_rgba(236,72,153,0.4)] transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center gap-2 text-base touch-manipulation"
               >
                 <span className="text-xl">➕</span>
                 <span>Add Keyword</span>
@@ -985,7 +984,7 @@ const Home = () => {
           {/* Submit Button */}
           <button
             type="submit"
-            className="w-full bg-linear-to-r from-purple-500 via-pink-500 to-blue-500 text-white font-semibold py-4 sm:py-4 px-6 sm:px-8 rounded-xl shadow-lg hover:shadow-[0_0_40px_rgba(168,85,247,0.4)] transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center gap-3 text-base sm:text-lg group touch-manipulation"
+            className="w-full bg-linear-to-r from-purple-500 via-pink-500 to-blue-500 text-white font-semibold py-4 px-6 sm:px-8 rounded-xl shadow-lg hover:shadow-[0_0_40px_rgba(168,85,247,0.4)] transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center gap-3 text-base sm:text-lg group touch-manipulation"
           >
             <span>Generate Resume</span>
             <span className="text-2xl group-hover:translate-x-1 transition-transform">
