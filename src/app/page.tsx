@@ -121,7 +121,13 @@ const Home = () => {
   });
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+    <div
+      className={`min-h-screen transition-colors duration-300 py-12 px-4 sm:px-6 lg:px-8 flex flex-col items-center justify-center ${
+        theme
+          ? "bg-linear-to-br from-gray-50 via-white to-gray-100"
+          : "bg-linear-to-br from-gray-900 via-gray-800 to-gray-900"
+      }`}
+    >
       {/* Header Section */}
       <div className="text-center mb-12 animate-[fadeInUp_0.6s_ease-out]">
         <h1 className="text-4xl  sm:text-5xl md:text-6xl font-bold mb-3 sm:mb-4 bg-linear-to-r from-purple-400 via-pink-500 to-blue-500 bg-clip-text text-transparent leading-tight">
