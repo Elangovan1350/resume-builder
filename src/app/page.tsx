@@ -16,6 +16,7 @@ const Home = () => {
   const { setResumeData, theme } = useResumeStore();
 
   const router = useRouter();
+  alert(window.innerWidth);
   const {
     register,
     handleSubmit,
