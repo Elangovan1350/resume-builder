@@ -113,7 +113,7 @@ export const useResumeStore = create<ResumeState>((set) => ({
     keywords: [],
   },
   theme: false,
-  setTheme: (theme: boolean) => set((state) => ({ ...state, theme: theme })),
+  setTheme: (theme: boolean) => set({ theme }),
   // Action to update the resume data
   setResumeData: (data: ResumeSchema) =>
     set((state) => ({ ...state, ...data, resumeData: data })),

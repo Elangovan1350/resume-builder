@@ -1,14 +1,30 @@
 "use client";
 import { MoonIcon, SunIcon } from "lucide-react";
 import { useResumeStore } from "./store";
+import React from "react";
 
 const Theme = () => {
   const { theme, setTheme } = useResumeStore();
-  const handleTheme = (e: React.MouseEvent<HTMLButtonElement>) => {
-    e.preventDefault();
-    e.stopPropagation();
-    setTheme(!theme);
-  };
+  const isChangingRef = React.useRef(false);
+
+  const handleTheme = React.useCallback(
+    (e: React.MouseEvent<HTMLButtonElement>) => {
+      e.preventDefault();
+      e.stopPropagation();
+
+      // Prevent rapid-fire clicks
+      if (isChangingRef.current) return;
+
+      isChangingRef.current = true;
+      setTheme(!theme);
+
+      // Reset after a short delay
+      setTimeout(() => {
+        isChangingRef.current = false;
+      }, 300);
+    },
+    [theme, setTheme],
+  );
   return (
     <button
       onClick={handleTheme}
