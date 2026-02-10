@@ -1,11 +1,9 @@
 "use client";
 import { MoonIcon, SunIcon } from "lucide-react";
 import { useResumeStore } from "./store";
-import { useState } from "react";
 
 const Theme = () => {
   const { theme, setTheme } = useResumeStore();
-  const [width, setWidth] = useState(window.innerWidth);
   const handleTheme = () => {
     setTheme(!theme);
   };
@@ -22,12 +20,12 @@ const Theme = () => {
       {theme ? (
         <>
           <MoonIcon className="w-5 h-5" />
-          <span className="text-sm">Dark{width}</span>
+          <span className="text-sm">Dark</span>
         </>
       ) : (
         <>
           <SunIcon className="w-5 h-5" />
-          <span className="text-sm">Light{width}</span>
+          <span className="text-sm">Light</span>
         </>
       )}
     </button>
