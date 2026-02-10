@@ -928,7 +928,7 @@ const Home = () => {
                   >
                     Keyword {index + 1}
                   </h3>
-                  {keywordsFields.length > 0 && (
+                  {keywordsFields.length > 1 && (
                     <button
                       type="button"
                       onClick={() => keywordsRemove(index)}
