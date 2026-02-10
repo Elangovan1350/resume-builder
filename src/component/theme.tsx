@@ -6,7 +6,6 @@ const Theme = () => {
   const { theme, setTheme } = useResumeStore();
   const handleTheme = () => {
     setTheme(!theme);
-    alert(theme);
   };
   return (
     <button
@@ -21,12 +20,12 @@ const Theme = () => {
       {theme ? (
         <>
           <MoonIcon className="w-5 h-5" />
-          <span className="text-sm">Dark</span>
+          <span className="text-sm">Dark{window.innerWidth}</span>
         </>
       ) : (
         <>
           <SunIcon className="w-5 h-5" />
-          <span className="text-sm">Light</span>
+          <span className="text-sm">Light{window.innerWidth}</span>
         </>
       )}
     </button>

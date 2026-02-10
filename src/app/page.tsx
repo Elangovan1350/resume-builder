@@ -10,13 +10,11 @@ import {
   getCardClass,
   getSectionOptionClass,
 } from "@/component/theme-utils";
-import Theme from "@/component/theme";
 
 const Home = () => {
   const { setResumeData, theme } = useResumeStore();
 
   const router = useRouter();
-  alert(window.innerWidth);
   const {
     register,
     handleSubmit,
