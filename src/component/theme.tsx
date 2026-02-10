@@ -17,6 +17,7 @@ const Theme = () => {
 
       isChangingRef.current = true;
       setTheme(!theme);
+      alert(theme);
 
       // Reset after a short delay
       setTimeout(() => {
