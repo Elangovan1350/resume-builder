@@ -18,7 +18,6 @@ const Theme = () => {
           ? "bg-gray-800 text-yellow-400 hover:bg-gray-900 hover:shadow-[0_0_20px_rgba(250,204,21,0.3)]"
           : "bg-purple-500 text-white hover:bg-purple-600 hover:shadow-[0_0_20px_rgba(168,85,247,0.4)]"
       }`}
-      aria-label="Toggle theme"
     >
       {theme ? (
         <>
