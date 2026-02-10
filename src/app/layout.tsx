@@ -31,7 +31,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.variable} antialiased`}>
-        {/* <Theme /> */}
+        <Theme />
         {children}
       </body>
     </html>
