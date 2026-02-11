@@ -1,5 +1,6 @@
 import z from "zod";
 import { create } from "zustand";
+import { persist } from "zustand/middleware";
 
 export const schema = z.object({
   name: z
@@ -96,25 +97,32 @@ interface ResumeState {
   setTheme: (theme: boolean) => void;
 }
 
-export const useResumeStore = create<ResumeState>((set) => ({
-  resumeData: {
-    name: "",
-    email: "",
-    phone: "",
-    address: "",
-    linkedin: "",
-    website: "",
-    summary: "",
-    experience: [],
-    education: [],
-    projects: [],
-    certifications: [],
-    skills: [],
-    keywords: [],
-  },
-  theme: false,
-  setTheme: (theme: boolean) => set({ theme }),
-  // Action to update the resume data
-  setResumeData: (data: ResumeSchema) =>
-    set((state) => ({ ...state, ...data, resumeData: data })),
-}));
+export const useResumeStore = create<ResumeState>()(
+  persist(
+    (set) => ({
+      resumeData: {
+        name: "",
+        email: "",
+        phone: "",
+        address: "",
+        linkedin: "",
+        website: "",
+        summary: "",
+        experience: [],
+        education: [],
+        projects: [],
+        certifications: [],
+        skills: [],
+        keywords: [],
+      },
+      theme: false,
+      setTheme: (theme: boolean) => set({ theme }),
+      // Action to update the resume data
+      setResumeData: (data: ResumeSchema) =>
+        set((state) => ({ ...state, ...data, resumeData: data })),
+    }),
+    {
+      name: "resume-data",
+    },
+  ),
+);
